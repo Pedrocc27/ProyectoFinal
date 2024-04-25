@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escape Room</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <div class="container">
+    <div id="player-setup">
+      <h1>Bienvenido al Escape Room</h1>
+      <label for="player-name">Nombre:</label>
+      <input type="text" id="player-name" placeholder="Ingrese su nombre">
+      <button onclick="startGame()">Iniciar</button>
+    </div>
+    <div id="game-instructions" style="display: none;">
+      <h2>Instrucciones del Juego</h2>
+      <p>Bienvenido, <span id="welcome-message"></span>!</p>
+      <p>Te encuentras atrapado en una serie de pruebas. Debes resolver cada una para escapar. Tienes 30 minutos, aprovecha cada segundo porque el tiempo vuela. Buena suerte.</p>
+      <button onclick="beginGame()">Empezar</button>
+    </div>
+      <div>
+      <div id="countdown">30:00</div>
+      <div id="puzzle" class="hidden">
+          <h2 class="subtitle">Primera Prueba: Acertijos</h2>
+          <p class="instruction" id="question"></p>
+          <input type="text" id="answer-input" class="input" placeholder="Ingresa tu respuesta">
+          <button onclick="checkAnswer()" id="check-answer" class="button">Comprobar</button>
+          <p id="feedback" class="feedback"></p>
+      </div>
+
+      <div id="word-search" class="hidden">
+        <h2 class="subtitle">Segunda Prueba: Sopa de Letras</h2>
+        <div id="puzzlez"></div>
+        <input type="text" id="word-input" class="input" placeholder="Escribe la palabra aquí">
+        <button onclick="checkWord()" class="button">Comprobar</button>
+        <p id="word-feedback" class="feedback"></p>
+        <div id="word-search-info" class="hidden">
+          <p>Hay <span id="word-count"></span> palabras relacionadas con el tema <span id="word-theme"></span>.</p>
+        </div>     
+      </div>
+      </div>
+
+      <div id="memory-game">
+        <h2 class="subtitle">Tercera Prueba: Banderas y Memoria</h2>
+        <div id="instructions">
+          <p>En este juego, se mostrarán varias banderas de países una tras otra.</p>
+          <p>Tu primera tarea es ir adivinando a qué país corresponde cada bandera, pero sobre todo recordar la secuencia en la que han ido apareciendo los países.</p>
+          <p>Una vez hayas adivinado todas las banderas, se te pedirá que ingreses la secuencia en el mismo orden.</p>
+          <p>¡Buena suerte!</p>
+        </div>
+        <div id="flag-container"></div>
+        <button id="start-button">Comenzar</button>
+        <input type="text" id="player-answer" placeholder="Ingresa el país">
+        <button onclick="checkAnswerFlag()" class="button">Comprobar</button>
+        <p id="result"></p>
+        <div id="user-sequence-container"></div>
+        <button onclick="checkSequence()" id="check-sequence" class="button" style="display: none;">Comprobar secuencia</button>
+      </div>
+  </div>
+
+  
+  <script src="proyecto.js"></script>
+</body>
+</html>
+

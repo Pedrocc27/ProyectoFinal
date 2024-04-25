@@ -1,0 +1,200 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #222;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s;
+}
+
+.container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.label {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff5722;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #ff8a65;
+  transform: scale(1.1);
+}
+
+.hidden {
+  display: none;
+}
+
+.feedback {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.screen {
+  margin-top: 50px;
+}
+
+#player-setup {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  transition: background-color 0.5s;
+}
+
+#player-setup:hover {
+  background-color: #444;
+}
+
+#game-instructions {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 10px;
+  transition: background-color 0.5s;
+}
+
+#game-instructions:hover {
+  background-color: #555;
+}
+
+#puzzle {
+  background-color: #555;
+  padding: 20px;
+  border-radius: 10px;
+  transition: background-color 0.5s;
+}
+
+#puzzle:hover {
+  background-color: #666;
+}
+
+#countdown {
+  font-size: 40px;
+  color: red;
+  margin-top: 20px;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+#puzzlez div {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #555;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+#puzzlez div.hidden {
+  visibility: hidden;
+}
+
+#puzzlez {
+  display: grid;
+  grid-template-columns: repeat(10, 40px); /* Cambia el número según el tamaño deseado */
+  gap: 5px;
+  margin: 0 auto; /* Esto centrará el panel horizontalmente */
+  margin-top: 20px;
+  width: fit-content; /* Esto ajustará el ancho del panel según su contenido */
+}
+
+.input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px; /* Aumenta el margen inferior para bajar el recuadro */
+  margin-top: 10px; /* Nuevo margen superior para separarlo del título */
+  font-size: 16px;
+}
+
+#memory-game {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#flag-container img {
+  margin: 5px;
+  cursor: pointer;
+}
+
+#player-order {
+  margin-top: 20px;
+}
+
+#result {
+  margin-top: 20px;
+}
+
+#flag-container img {
+  max-width: 150px;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+#user-sequence-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#user-sequence-container input {
+  width: 100px;
+  margin: 5px;
+}
+
+#memory-game {
+  display: none;
+}
+
+#check-sequence {
+  display: block;
+  margin: 0 auto; /* Centra horizontalmente el botón */
+  margin-top: 10px; /* Espacio superior para separar del contenido superior */
+}
+
